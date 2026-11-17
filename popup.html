@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude SessionKey 登录</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <header><span class="badge">本地工具 · 登录</span><h1>登录 Claude</h1>
+    <p>粘贴自己的 SessionKey，恢复对应账号的会话。将替换此浏览器用户当前的 Claude 会话。</p></header>
+  <main>
+    <form id="login-form">
+      <label for="key">SessionKey</label>
+      <input id="key" type="password" placeholder="粘贴完整的密钥值" autocomplete="off" spellcheck="false" required>
+      <div class="actions">
+        <button id="toggle" type="button" aria-pressed="false">显示</button>
+        <button id="clear" type="button">清空输入</button>
+      </div>
+      <button id="login" class="primary" type="submit">写入并打开 Claude</button>
+    </form>
+    <p id="status" role="status" aria-live="polite">请输入密钥值，不要粘贴整段 Cookie。</p>
+    <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">打开 Claude ↗</a>
+  </main>
+  <footer>密钥仅写入 Claude Cookie，不另存或上传。会话过期、撤销或需要额外验证时，仍需通过 Claude 正常登录。</footer>
+</body>
+</html>

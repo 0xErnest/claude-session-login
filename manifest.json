@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Claude SessionKey 登录",
+  "version": "1.0.0",
+  "description": "手动导入自己的 SessionKey 并打开 Claude。",
+  "permissions": ["cookies"],
+  "host_permissions": ["https://claude.ai/*"],
+  "incognito": "split",
+  "action": {
+    "default_title": "Claude SessionKey 登录",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src 'none'"
+  }
+}
